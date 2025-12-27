@@ -1,0 +1,8 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/kingtoys/public_html
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/rsync -av --delete \
+        --exclude=".git/" \
+        --exclude=".cpanel.yml" \
+        ./ $DEPLOYPATH
