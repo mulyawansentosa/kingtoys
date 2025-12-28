@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form');
   if (sendButton && form) {
     sendButton.addEventListener('click', () => {
+      if (typeof form.reportValidity === 'function' && !form.reportValidity()) {
+        return;
+      }
+
       const name = (document.getElementById('contact-name')?.value || '').trim();
       const company = (document.getElementById('contact-company')?.value || '').trim();
       const phone = (document.getElementById('contact-phone')?.value || '').trim();
