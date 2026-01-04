@@ -1,9 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/example/public_html/
-    - /bin/cp -R materi $DEPLOYPATH
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp scripts.js $DEPLOYPATH
-    - /bin/cp styles.css $DEPLOYPATH
-    - /bin/cp tailwind-config.js $DEPLOYPATH
